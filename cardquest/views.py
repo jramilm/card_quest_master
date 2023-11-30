@@ -1,13 +1,14 @@
 from django.shortcuts import render
-from .models import Pokemoncard, Trainer
+from .models import PokemonCard, Trainer
+from django.views.generic.list import ListView
     
 # Create your views here.
 class HomePageView(ListView):
-    model = Pokemoncard
+    model = PokemonCard
     context_object_name = 'home'
-    template_name = 'home.html'
+    template_name = 'base.html'
 
-    def get_context_data(self, **kwargs) -> dict[str, Any]:
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
     

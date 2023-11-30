@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django import path
+from django.urls import path
 from cardquest.views import HomePageView, TrainerList
 from cardquest import views
 
