@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-984v@ouj6r$4zw%567yioule0fgwzw3)+dx7zgp5#j@kt&1*4x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cardquestmalate.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
