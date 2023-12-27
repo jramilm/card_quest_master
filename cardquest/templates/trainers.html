@@ -3,6 +3,7 @@
 
 {% block content %}
     <!--TRAINERS-->
+    <a href="{% url 'trainer-add' %}" class="add-btn">Add New Trainer</a>
     <section class="trainers-container">
         <table class="styled-table">
             <tbody>
@@ -20,17 +21,15 @@
                         <td>{{ object.location }}</td>
                         <td>{{ object.email }}</td>
                         <td>
-                            <a href="trainer_list/{{ object.id }}">Edit</a>
-                            <a href="trainer_list/{{ object.id }}">Delete</a>
+                            <a href="trainer_list/{{ object.id }}" class="edit-del-btn">Edit</a>
+                            <a href="trainer_list/{{ object.id }}/delete" class="edit-del-btn">Delete</a>
                         </td>
                     </tr>
+                {% empty %}
                 {% endfor %}
             </tbody>
         </table>
     </section>
-    <br>
-    <a href="{% url 'trainer-add' %}" class="btn btn-outline-primary">Add New Trainer</a>
-
     <div>
         {% include 'includes/pagination.html' %}
     </div>
