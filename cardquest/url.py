@@ -1,11 +1,9 @@
-'''
-from django import path
+from django.urls import path
 from .views import HomePageView, TrainerList
-from cardquest import views
+from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.HomePageView.as_view(), name='home'),
+    path('', HomePageView.as_view(), name='home'),
     path('trainer_list', TrainerList.as_view(), name='trainer-list'),
 ]
-'''

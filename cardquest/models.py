@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class BaseModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, db_index=True,)
@@ -61,6 +62,7 @@ class PokemonCard(BaseModel):
 
     def __str__(self):
         return self.name
+
 
 class Collection(BaseModel):
     card = models.ForeignKey(PokemonCard, blank=True, null=True, on_delete=models.CASCADE)

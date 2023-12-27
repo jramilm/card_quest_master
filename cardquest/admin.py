@@ -1,22 +1,19 @@
 from django.contrib import admin
 from .models import PokemonCard, Trainer, Collection
 
-# Register your models here.
-# admin.site.register(PokemonCard)
-
 
 class PokemonAdmin(admin.ModelAdmin):
-    list_display = ('name', 'rarity')
+    list_display = [f.name for f in PokemonCard._meta.fields]
     search_fields = ('name',)
 
 
 class CollectionAdmin(admin.ModelAdmin):
-    list_display = ('trainer', 'card', 'created_at')
+    list_display = [f.name for f in Collection._meta.fields]
     search_fields = ('trainer', 'card')
 
 
 class TrainerAdmin(admin.ModelAdmin):
-    list_display = ('name', 'location')
+    list_display = [f.name for f in Trainer._meta.fields]
     search_fields = ('name',)
 
 

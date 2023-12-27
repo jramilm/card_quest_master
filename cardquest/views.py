@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from .models import PokemonCard, Trainer
 from django.views.generic.list import ListView
-    
+
+
 # Create your views here.
 class HomePageView(ListView):
     model = PokemonCard
