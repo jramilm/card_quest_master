@@ -88,6 +88,8 @@ main .add-btn:hover {
 main .edit-del-btn {
   text-decoration: none;
   color: #007bff;
+  background: none;
+  border: none;
 }
 
 main .edit-del-btn:hover {
@@ -568,4 +570,9 @@ main .edit-del-btn:hover {
 .social-icons a:hover {
   color: #ffffff; /* Change color on hover if desired */
   /* Add additional hover effects */
+}
+
+form {
+  display: grid;
+  justify-items: center;
 }

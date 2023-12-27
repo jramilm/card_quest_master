@@ -2,6 +2,9 @@
 {% load static %}
 
 {% block content %}
+    <div class>
+        <a href="{% url 'pokemon-add' %}" class="add-btn">Add New Pokemon</a>
+    </div>
     <section class="cards-container">
         <!-- Display Pokemon Cards -->
         {% for card in pokemoncard %}
@@ -60,4 +63,7 @@
             </div>
         {% endfor %}
     </section>
+    <div>
+        {% include 'includes/pagination.html' %}
+    </div>
 {% endblock %}
