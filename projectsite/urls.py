@@ -8,5 +8,6 @@ urlpatterns = [
     path('trainer_list', views.TrainerList.as_view(), name='trainer-list'),
     path('trainer_list/add', views.TrainerCreateView.as_view(), name='trainer-add'),
     path('trainer_list/<pk>', views.TrainerUpdateView.as_view(), name='trainer-update'),
-    path('trainer_list/<pk>/delete', views.TrainerDeleteView.as_view(), name='trainer-delete')
+    path('trainer_list/<pk>/delete', views.TrainerDeleteView.as_view(), name='trainer-delete'),
+    path('pokemoncard_list', views.PokemonCardListView.as_view(), name='pokemoncard-list'),
 ]
