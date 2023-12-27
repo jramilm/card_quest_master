@@ -14,15 +14,15 @@
                 <th>Email</th>
                 <th>Action</th>
             </tr>
-                {% for object in object_list %}
+                {% for object in trainer %}
                     <tr>
                         <td>{{ object.name }}</td>
                         <td>{{ object.birthdate }}</td>
                         <td>{{ object.location }}</td>
                         <td>{{ object.email }}</td>
                         <td>
-                            <a href="collection_list/{{ object.id }}" class="edit-del-btn">Edit</a>
-                            <a href="collection_list/{{ object.id }}/delete" class="edit-del-btn">Delete</a>
+                            <a href="trainer_list/{{ object.id }}" class="edit-del-btn">Edit</a>
+                            <a href="trainer_list/{{ object.id }}/delete" class="edit-del-btn">Delete</a>
                         </td>
                     </tr>
                 {% empty %}

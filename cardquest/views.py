@@ -81,7 +81,7 @@ class TrainerDeleteView(DeleteView):
 
 class CollectionDeleteView(DeleteView):
     model = Collection
-    template_name = 'collection.html_del.html'
+    template_name = 'collection_del.html'
     success_url = reverse_lazy('collection-list')
 
 
